@@ -33,15 +33,15 @@ Las siguientes librerías deben instalarse en el entorno de ejecución:
 ## 📂 Estructura del Proyecto
 ```
 Proyecto_Booking_Raul_AlvaroProleon/
-├── input/                         # Archivos de entrada
-│   ├── hotel_bookings.csv         # Dataset de reservas hoteleras
-├── output/                        # Archivos de salida
-│   ├── tabla_bkg_reservas.csv     # Reservas y cancelaciones por mes y año
-│   ├── tabla_bkg_dias_espera.csv  # Promedio de días de espera y huéspedes
-│   ├── tabla_bkg_tarifa.csv       # Tarifas diarias promedio por habitación
-├── src/                         # Archivos de entrada
-│   ├── etl_pipeline.py            # Código principal del ETL
-├── README.md                      # Documentación del proyecto
+├── input/                                     # Archivos de entrada
+│   ├── hotel_bookings.csv                     # Dataset de reservas hoteleras
+├── output/                                    # Archivos de salida
+│   ├── tabla_bkg_reservas.csv                 # Reservas y cancelaciones por mes y año
+│   ├── tabla_bkg_dias_espera.csv              # Promedio de días de espera y huéspedes
+│   ├── tabla_bkg_tarifa.csv                   # Tarifas diarias promedio por habitación
+├── src/                                       # Archivos de entrada
+│   ├── Etl_ApacheSpark_Booking_RaulAP.ipynb   # Código principal del ETL
+├── README.md                                  # Documentación del proyecto
 ```
 
 ## 🔄 Diagrama del Proceso ETL
