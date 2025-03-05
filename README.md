@@ -43,13 +43,34 @@ Proyecto_Booking_Raul_AlvaroProleon/
 ├── README.md                      # Documentación del proyecto
 ```
 
+## 🔄 Diagrama del Proceso ETL
+A continuación, se presenta un esquema visual del proceso ETL implementado:
+
+```
+    +------------+       +----------------------+       +---------------+     
+
+    | Extracción | ----> |  Exploración (EDA)  | ----> | Transformación |
+    +------------+       +----------------------+       +---------------+
+          |                        |                         |
+    Fuente de Datos       Estadísticas, Valores       Limpieza de Datos  
+   (hotel_bookings.csv)    Faltantes, Outliers        Creación de Features
+          |                                                  |
+          |----------------------------------------------->  |
+                             +---------------+ 
+                             |   Carga (CSV) | 
+                             +---------------+ 
+                             | Almacenamiento | 
+                             |   en archivos  |
+                             +---------------+
+```
+
 ## 📥 Extracción de Datos
 La extracción se realiza desde un archivo CSV almacenado en **Google Drive**. Se usa PySpark para cargar los datos:
 ```python
 def f_extraccion(path):
     df_hotel = spark.read.csv(path, header=True, inferSchema=True)
     print(f'Columnas: {len(df_hotel.columns)}, Registros: {df_hotel.count()}')
-    return df_hotel
+    return df_hotel  
 ```
 
 ## 🔍 Análisis Exploratorio de Datos (EDA)
@@ -83,18 +104,6 @@ def f_carga(df, output_path):
     df.write.mode("overwrite").option('header', 'true').csv(output_path)
 ```
 
-## 🔄 Diagrama del Proceso ETL
-A continuación, se presenta un esquema visual del proceso ETL implementado:
-
-```
-    +------------+       +----------------+       +---------------+
-    | Extracción | ----> | Transformación | ----> | Carga (CSV)   |
-    +------------+       +----------------+       +---------------+
-          |                     |                        |
-    Fuente de Datos       Limpieza de Datos       Almacenamiento en CSV
-   (hotel_bookings.csv)   Creación de Features
-```
-
 ## 🏁 Ejecución del Pipeline ETL
 Para ejecutar el pipeline, sigue estos pasos en Google Colab:
 1. **Montar Google Drive**:
@@ -123,5 +132,5 @@ Master en Big Data & Business Intelligence
 Este proyecto se distribuye bajo la licencia MIT.
 
 ## 📢 Conclusión
-Este proyecto demuestra la efectividad de **Apache Spark** en el procesamiento de grandes volúmenes de datos mediante un pipeline **ETL** optimizado. Se logró extraer, transformar y cargar datos de reservas hoteleras, proporcionando información valiosa para la toma de decisiones. Gracias a la capacidad de procesamiento distribuido de Spark, el flujo de trabajo es escalable y eficiente. Este enfoque puede adaptarse para distintos dominios de análisis de datos en **Big Data**.
+Este proyecto demuestra la efectividad de **Apache Spark** en el procesamiento de grandes volúmenes de datos mediante un pipeline **ETL** optimizado. Se logró extraer, explorar, transformar y cargar datos de reservas hoteleras, proporcionando información valiosa para la toma de decisiones. Gracias a la capacidad de procesamiento distribuido de Spark, el flujo de trabajo es escalable y eficiente. Este enfoque puede adaptarse para distintos dominios de análisis de datos en **Big Data**.
 
