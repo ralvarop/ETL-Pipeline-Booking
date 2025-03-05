@@ -116,7 +116,7 @@ main()
 ```
 
 ## 📌 Autor
-**Raúl Álvaro Proleón**  
+**Raúl Alvaro Proleon**  
 Master en Big Data & Business Intelligence  
 
 ## 📜 Licencia
