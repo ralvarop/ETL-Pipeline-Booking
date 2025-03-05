@@ -1,6 +1,3 @@
-# ETL-Pipeline-Booking
-Proceso de ETL para el dataset de booking
-
 # ETL Pipeline con Apache Spark en Google Colab
 
 ## 📌 Descripción del Proyecto
