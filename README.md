@@ -109,15 +109,15 @@ def f_carga(df, output_path):
 ## 🏁 Ejecución del Pipeline ETL
 Para ejecutar el pipeline, sigue estos pasos en Google Colab:
 
-1. **Abrir Google Colab**: Ve a [Google Colab](https://colab.research.google.com/).
+1. **Abrir Google Colab**: Ve a [Google Colab](https://colab.research.google.com/) y abre un cuaderno nuevo.
 
-2. **Cargar el Proyecto Proyecto_Booking_Raul_AlvaroProleon.zip**: Ve a Archivos (lado izquierdo) y luego la opción Subir al Almacenamiento de Sesion.
+2. **Cargar Proyecto_Booking_Raul_AlvaroProleon.Zip**: En colab Ve a Archivos (lado izquierdo) y luego la opción Subir al Almacenamiento de Sesion.
 
 3. **Descomprimir el .Zip**: (si aún no están instaladas):
 ```python
 !unzip Proyecto_Booking_Raul_AlvaroProleon.zip
 ```
-4. **Instalar dependencias** (si aún no están instaladas):
+4. **Instalar Dependencias de Entorno Spark** (si aún no están instaladas):
 ```python
 !apt-get update
 !apt-get install openjdk-8-jdk-headless -qq > /dev/null
@@ -125,13 +125,13 @@ Para ejecutar el pipeline, sigue estos pasos en Google Colab:
 !tar xf spark-3.5.4-bin-hadoop3.tgz
 !pip install -q findspark
 ```
-5. **Ejecutar el script de  Dependencia de Librerias (incluido Spark)**:
+5. **Ejecutar el script de Librerias (incluido Spark)**:
 ```python
 !python /content/Proyecto_Booking_Raul_AlvaroProleon/src/dependes.py
 ```
 6. **Ejecutar el script principal**: Se ejecutará el Pipeline de Booking con Apache Spark
 ```python
-main()
+!python /content/Proyecto_Booking_Raul_AlvaroProleon/src/main.py
 ```
 
 ## 📌 Autor
