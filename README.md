@@ -40,7 +40,8 @@ Proyecto_Booking_Raul_AlvaroProleon/
 │   ├── tabla_bkg_dias_espera.csv              # Promedio de días de espera y huéspedes
 │   ├── tabla_bkg_tarifa.csv                   # Tarifas diarias promedio por habitación
 ├── src/                                       # Archivos de entrada
-│   ├── Etl_ApacheSpark_Booking_RaulAP.ipynb   # Código principal del ETL
+│   ├── dependes.py                            # Código librerias de spark 
+|   ├── main.py                                # Código principal del ETL
 ├── README.md                                  # Documentación del proyecto
 ```
 
@@ -107,12 +108,16 @@ def f_carga(df, output_path):
 
 ## 🏁 Ejecución del Pipeline ETL
 Para ejecutar el pipeline, sigue estos pasos en Google Colab:
-1. **Montar Google Drive**:
+
+1. **Abrir Google Colab**: Ve a [Google Colab](https://colab.research.google.com/).
+
+2. **Cargar el Proyecto Proyecto_Booking_Raul_AlvaroProleon.zip**: Ve a Archivos (lado izquierdo) y luego la opción Subir al Almacenamiento de Sesion.
+
+3. **Descomprimir el .Zip**: (si aún no están instaladas):
 ```python
-from google.colab import drive
-drive.mount('/content/drive')
+!unzip Proyecto_Booking_Raul_AlvaroProleon.zip
 ```
-2. **Instalar dependencias** (si aún no están instaladas):
+4. **Instalar dependencias** (si aún no están instaladas):
 ```python
 !apt-get update
 !apt-get install openjdk-8-jdk-headless -qq > /dev/null
@@ -120,7 +125,11 @@ drive.mount('/content/drive')
 !tar xf spark-3.5.4-bin-hadoop3.tgz
 !pip install -q findspark
 ```
-3. **Ejecutar el script principal**:
+5. **Ejecutar el script de  Dependencia de Librerias (incluido Spark)**:
+```python
+!python /content/Proyecto_Booking_Raul_AlvaroProleon/src/dependes.py
+```
+6. **Ejecutar el script principal**: Se ejecutará el Pipeline de Booking con Apache Spark
 ```python
 main()
 ```
