@@ -136,7 +136,7 @@ Para ejecutar el pipeline, sigue estos pasos en Google Colab:
 
 ## 📌 Autor
 **Raúl Alvaro Proleon**  
-Master en Big Data & Business Intelligence  
+Máster en Big Data & Business Intelligence  
 
 ## 📜 Licencia
 Este proyecto se distribuye bajo la licencia MIT.
