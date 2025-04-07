@@ -138,9 +138,6 @@ Para ejecutar el pipeline, sigue estos pasos en Google Colab:
 **Raúl Alvaro Proleon**  
 Máster en Big Data & Business Intelligence  
 
-## 📜 Licencia
-Este proyecto se distribuye bajo la licencia MIT.
-
 ## 📢 Conclusión
 Este proyecto demuestra la efectividad de **Apache Spark** en el procesamiento de grandes volúmenes de datos mediante un pipeline **ETL** optimizado. Se logró extraer, explorar, transformar y cargar datos de reservas hoteleras, proporcionando información valiosa para la toma de decisiones. Gracias a la capacidad de procesamiento distribuido de Spark, el flujo de trabajo es escalable y eficiente. Este enfoque puede adaptarse para distintos dominios de análisis de datos en **Big Data**.
 
